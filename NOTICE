@@ -1,0 +1,17 @@
+Home Lending Chamber
+Copyright 2026 Leland "TJ" Jourdan II
+
+Workflow and committee operating layer built on the LOOPER engine lineage.
+Licensed under the Apache License, Version 2.0.
+
+See https://github.com/lelandsequel/looper-northpole for the intake/spec engine.
+
+Third-party and vendored components
+-----------------------------------
+
+- LUNA chamber ledger + witness (`lib/luna/chamber/`) — vendored; Apache-2.0.
+- 6D COSMIC pipeline (`lib/six-d/cosmic/`) — LUNA-sealed spec engine.
+- CADMUS intake gate (`lib/cadmus/`) — deterministic intake discipline.
+- HL Prioritization methodology — synthetic demo data only; no confidential bank data.
+
+Dependencies are listed in package-lock.json with their respective licenses.
