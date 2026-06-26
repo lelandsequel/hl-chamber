@@ -11,11 +11,22 @@ Synthetic demo data only. No confidential bank data. Apache-2.0.
 
 ## Clone and run
 
+### Has Node 20+ / npm
+
 ```bash
 git clone https://github.com/lelandsequel/hl-chamber.git
 cd hl-chamber
-npm run setup          # install + seed + build
+npm run setup
 npm run dev            # http://localhost:3000
+```
+
+### No npm — Docker only
+
+```bash
+git clone https://github.com/lelandsequel/hl-chamber.git
+cd hl-chamber
+cp .env.example .env
+docker compose up --build -d    # http://localhost:3002
 ```
 
 Unlock: `333333` (or `GATE_CODE` in `.env`).

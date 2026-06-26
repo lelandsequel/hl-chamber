@@ -6,7 +6,8 @@ import { INITIATIVES } from "../lib/agility/seed/initiatives.mjs";
 
 const dataDir = process.env.LOOPER_DATA_DIR ?? path.join(process.cwd(), "data");
 fs.mkdirSync(dataDir, { recursive: true });
-const db = new Database(path.join(dataDir, "looper-northpole.db"));
+const dbName = process.env.CHAMBER_DB_NAME ?? "hl-chamber.db";
+const db = new Database(path.join(dataDir, dbName));
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS initiatives (id TEXT PRIMARY KEY, payload TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT (datetime('now')));
